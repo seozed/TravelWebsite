@@ -1,0 +1,858 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>[!--pagetitle--]</title>
+    <meta name="description" content="[!--pagedes--]" />
+    <meta name="keywords" content="[!--pagekey--]" />
+    <link href="http://s.cncnimg.cn/css/wd/common2.css?130312" rel="stylesheet" type="text/css" />
+    <link href="http://s.cncnimg.cn/css/wd/layout2.css?130312" rel="stylesheet" type="text/css" />
+    <link href="http://s.cncnimg.cn/css/wd/skin2_1.css?130312" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://s.cncnimg.cn/js/jquery-1.10.2.min.js"></script>
+</head>
+
+<body>
+    
+    <style>
+        .top_rht {
+            font-family: "微软雅黑";
+        }
+
+        .top_rht .txt dt {
+            color: #666666;
+        }
+
+        .xianluMoney {
+            background: #fff2e8;
+            clear: both;
+            padding: 5px 0;
+            margin-bottom: 11px;
+        }
+
+        .xianluMoney:after {
+            content: " ";
+            display: block;
+            clear: both;
+        }
+
+        .top_rht .key {
+            padding-left: 0;
+            display: block;
+            width: auto;
+            padding-right: 0;
+        }
+
+        .top_rht .txt .custom_tip {
+            width: auto;
+        }
+
+        .iconHb,
+        .iconRight,
+        .iconJb {
+            background: url(http://s.cncnimg.cn/css/wd/ico_pic_bottom.png) no-repeat;
+            background-position: -0px -202px;
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            vertical-align: top;
+            margin-top: 4px;
+        }
+
+        .iconRight {
+            background-position: -18px -202px;
+            margin-left: 7px;
+        }
+
+        .iconJb {
+            background-position: -38px -203px;
+        }
+
+        .iconHb,
+        .iconJb {
+            margin-right: 3px;
+        }
+
+        .xianluMoney .hb {
+            float: right;
+            margin-right: 15px;
+            color: #ff4400;
+            cursor: pointer;
+        }
+
+        .xianluMoney .jf {
+            color: #333;
+        }
+
+        .txtPrompt {
+            position: absolute;
+            background: #fffeea;
+            border: #ff9900 solid 1px;
+            width: 300px;
+            padding: 5px 15px;
+            color: #666;
+            display: none;
+        }
+
+        .txtPrompt s {
+            background: url(http://s.cncnimg.cn/css/wd/ico_pic_bottom.png) no-repeat;
+            position: absolute;
+            width: 13px;
+            height: 7px;
+            background-position: -59px -206px;
+            left: 50%;
+            top: -7px;
+        }
+
+        .xianluMoney .hb span {
+            border: none;
+        }
+
+        .top_rht .txt dd.z_price {
+            position: relative;
+            z-index: 2;
+        }
+
+        .top_rht .txt dd.sale_51 {
+            position: relative;
+            padding: block;
+            margin-top: 10px;
+            font-family: 'microsoft yahei';
+            z-index: 1;
+        }
+
+        .top_rht .txt dd.sale_51 b {
+            display: inline-block;
+            padding-left: 18px;
+            color: #555;
+            font-size: 13px;
+        }
+
+        .top_rht .txt dd.sale_51 b em {
+            color: #ff5522;
+        }
+
+        .top_rht .txt dd.sale_51 b em b {
+            font-size: 24px;
+            padding: 0;
+            color: #ff5522;
+        }
+
+        .top_rht .txt dd.sale_51 .txtPrompt {
+            width: 200px;
+            margin-left: 73px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #666666;
+        }
+
+        .top_rht .txt dd .txtPrompt .con {
+            padding: 5px 0;
+        }
+
+        .top_rht .txt dd .txtPrompt p {
+            line-height: 20px;
+        }
+
+        .price_produce:hover .txtPrompt {
+            display: block;
+        }
+
+        .guoqin_500x50 img {
+            width: 100%;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+    <div class="ndwz">
+        当前位置：[!--newsnav--]
+    </div>
+    <div id="conten">
+        <div class="rht">
+            <div id="main">
+                <div class="top">
+                    <h1>[!--title--]
+                        <i class="recommend" title="推荐">
+                            <img src="http://s.cncnimg.cn/css/wd/images/ico_recommend.png">
+                        </i>
+                        <i title="支持在线支付">
+                            <img src="http://s.cncnimg.cn/css/wd/images/ico_zfb.png">
+                        </i>
+                        <i title="即时确认-表示该产品无需旅行社确认即可直接预订并付款">
+                            <img src="http://s.cncnimg.cn/css/wd/images/ico_jsqr.png">
+                        </i>
+                        <i class="ykbz" title="游客保障：该旅行社已签署游客保障协议，并缴纳1000元保证金。承诺如实描述、诚信经营、品质服务，在线预订有保障！"></i>
+                    </h1>
+                    <div class="top_lft">
+                        <p class="pic">
+                            <img src="http://c.cncnimg.cn/037/231/59a9_m.jpg" width="270" height="170" alt="北海乘船出发到涠洲岛快船２日游（豪华大船往返，住岛客栈一晚）"
+                            />
+                        </p>
+                        <div class="pic_bottom">
+                            <ul>
+                                <li>
+                                    <i class="i1"></i>关注 (9804)</i>
+                                </li>
+                                <li>
+                                    <i class="i2"></i>订单 (7笔)</li>
+                                <li>
+                                    <a class="favorites" rel="nofollow" href="javascript:;" data-href="http://www.cncn.com/login.php"
+                                        ajax_return="1" target="_self" onClick="_czc.push(['_trackEvent','page_hits','xianlu','fav',1]);"
+                                        title="收藏此线路">
+                                        <i class="i3"></i>收藏 (3)</a>
+                                </li>
+                                <li class="bdsharebuttonbox">
+                                    <a href="#" class="bds_more" data-cmd="more">
+                                        <i class="i4"></i>分享</a>
+                                </li>
+                            </ul>
+                            <div class="mobile_con">
+                                <span>
+                                    <i class="i5"></i>立即穿越到手机</span>
+                                <div class="hide_box">
+                                    <div class="bg">
+                                        <i class="icon"></i>
+                                        <img src="http://c.cncnimg.cn/qcode/1549/794.png" width="110" height="110" alt="扫描二维码，随时随地看线路">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <script>window._bd_share_config = { "common": { "bdSnsKey": { "tsina": "2352878040" }, "bdText": "#旅游推荐# 最近计划去旅行，在@欣欣旅游 看到这条旅游线路挺心动的，各位帮我参谋参谋[爱你]：北海乘船出发到涠洲岛快船２日游（豪华大船往返，住岛客栈一晚）", "bdMini": "2", "bdMiniList": false, "bdPic": "http://c.cncnimg.cn/037/231/59a9_m.jpg", "bdStyle": "0", "bdSize": "16" }, "share": {} }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];</script>
+                    </div>
+                    <div class="top_rht">
+                        <div class="txt">
+                            <div class="custom_tip">本线路行程无购物，以您与旅行社签订的旅游系列合同为准。</div>
+                            <div class="xianluMoney">
+                                <dl>
+                                    <dt>门市价：</dt>
+                                    <dd>
+                                        <del id="price_span">[!--tprice--]</del>元 </dd>
+                                </dl>
+                                <dl>
+                                    <dt>欣欣价：</dt>
+                                    <dd class="z_price">
+                                        <span id="price_cncn_span">
+                                            <em>[!--price--]</em>元起</span>
+                                        <span id="price_cncn_child_span" style="padding-left:10px;"></span>
+                                        <span class="price_produce">
+                                            <span>起价说明</span>
+                                            <div class="txtPrompt" style="left: -136px; top: 22px;">
+                                                <s></s>
+                                                <div class="con">
+                                                    <p>1.
+                                                        <strong>本起价是从所有可选出发日期中选出的最低单人价格</strong>，实际产品价格会根据您所选择的出发日期、出行人数、服务标准、入住酒店房型、航班或交通以及所选附加服务的不同而有所差别；</p>
+                                                    <p
+                                                        class="f52">2.最终预订优惠价格以您提交订单，旅行社确认后为准；</p>
+                                                    <p>3.若出行中有(儿童、老人、学生、军人、伤残人士)等特殊人群，可先在线提交订单，客服会联系您确认相关优惠政策；</p>
+                                                    <p>4.若发现产品虚假报价，您可以举报，一经核实会及时删除该产品！</p>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </dd>
+                                </dl>
+                            </div>
+                            <dl>
+                                <dt>出发城市：</dt>
+                                <dd>
+                                        [!--origin--]
+                                </dd>
+                            </dl>
+                            <dl>
+                                <dt>发团日期：</dt>
+                                <dd class="fa_riqi">天天发团，请至少提前
+                                    <b>1</b>天报名</dd>
+                            </dl>
+                        </div>
+                        <form method="post" id="form_order" name="form_order" action="http://www.cncn.com/xianlu/order.php"
+                            target="_self">
+                            <input type="hidden" id="line_id" name="id" value="1549794" />
+                            <input type="hidden" name="uid" value="" />
+                            <input type="hidden" id="adult_price" name="adult_price" value="528" />
+                            <input type="hidden" id="child_price" name="child_price" value="0" />
+                            <input type="hidden" id="discount" name="discount" value="">
+                            <input type="hidden" id="type_id" name="type_id" value="1437502" />
+                            <input type="hidden" id="price_type_arrs" name="price_type_arrs" value="1437502" />
+                            <input type="hidden" id="name_mobile" name="name_mobile" value="" />
+                            <div class="key" id="key_css">
+                                <p class="tb-note-title">请选择您的出游信息
+                                    <b class="J_PanelCloser">关闭</b>
+                                </p>
+                                <dl>
+                                    <dt>预订类型：</dt>
+                                    <dd class="order_type">
+                                        <ul>
+                                            <li class="selected" id="li_date_type1437502">
+                                                <a href="javascript:;" onclick="get_date_price(1437502,560,528,0);" target="_self"
+                                                    title="住宿：岛上渔家乐住宿１晚餐饮：赠送一个岛上午餐（简餐）交通：岛上旅游用车，北海-涠洲岛往返船票保险：旅行社责任险，旅游意外险门票：涠洲岛景点首道大门票">跟团游（豪华大船往返）</a>
+                                            </li>
+                                        </ul>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>出发日期：</dt>
+                                    <dd>
+                                        <input id="start_time" name="start_time" type="text" class="text text110 riqi" value="请选择出发日期"
+                                            onClick="display_price_type();" readonly="readyonly" title="点击选择出发日期" /> </dd>
+                                </dl>
+                                <dl class="table_date">
+                                    <div class="pro_input date_price">
+                                        <input type="hidden" value="1" id="earlier_date">
+                                        <input type="hidden" value="2018-06-20" id="today">
+                                        <input type="hidden" value="" id="expire_day">
+                                        <input type="hidden" value="" id="date_price_data" name="date_price_data">
+                                        <div class="date_table" id="J_date_table">
+                                            <s class="close">隐藏</s>
+                                            <div class="hd">
+                                                <ul>
+                                                    <li>星期日</li>
+                                                    <li>星期一</li>
+                                                    <li>星期二</li>
+                                                    <li>星期三</li>
+                                                    <li>星期四</li>
+                                                    <li>星期五</li>
+                                                    <li>星期六</li>
+                                                </ul>
+                                            </div>
+                                            <script id="date_price_template" type="text/date_price"><div class="month_row"><div class="sd"><p class="year">$year年</p><p class="month">$month月</p></div><div class="bd"><ul class="clearfix" id="date_loading">$lis</ul></div></div></script>
+                                            <a class="pre_month" href="javascript:;" onClick="date_display();">更多日期</a>
+                                            <div class="fn-clear"></div>
+                                        </div>
+                                    </div>
+                                </dl>
+                                <dl>
+                                    <dt>预订人数：</dt>
+                                    <dd>
+                                        <input name="adult_num" type="text" class="text text30" value="1" onKeyUp="CheckInputInt(this);"
+                                            maxlength="2">
+                                        <span>成人</span>
+                                        <span id="child_num_span">
+                                            <input name="child_num" type="text" class="text text30" value="0" onKeyUp="CheckInputInt2(this);check_child_price();"
+                                                maxlength="2">
+                                            <span>儿童</span>
+                                        </span>
+                                        <span class="kucun" id="kucun"></span>
+                                        <span class="child_message" id="child_message"></span>
+                                    </dd>
+                                </dl>
+                                <div class="button">
+                                    <input type="button" id="submit_button" class="submit1" onClick="check_order(this);_czc.push(['_trackEvent','page_hits','xianlu','order',1]);">
+                                    <p>在线预订即享欣欣优惠价，您可以先预订，客服会主动联系您确认！</p>
+                                    <div class="error_tip">请选择出发日期</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="tab_fxd">
+                <div class="tit">
+                    <ul>
+                        <li class="on">
+                            <span>线路特色</span>
+                        </li>
+                        <li>
+                            <span>参考行程</span>
+                        </li>
+                        <li>
+                            <span>途经景点</span>
+                        </li>
+                        <li>
+                            <span>费用说明</span>
+                        </li>
+                        <li>
+                            <span>预订指南</span>
+                        </li>
+                        <li>
+                            <span>游客点评
+                                <em style="padding-left:5px">7</em>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="tab_fxd_bg"></div>
+            <div class="fn-clear"></div>
+            <div class="sectionBox">
+                <div class="section">
+                    <div class="tese" id="features">
+                        <div class="txt">
+                                [!--feature--]
+                        </div>
+                    </div>
+                </div>
+                <div id="scheduling" class="box section">
+                    <div class="tit">
+                        <ul>
+                            <li class="on">
+                                <span>
+                                    <a name="scheduling">参考行程</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="txt1 sch0" id="scheduling_main">
+                        <!-- 多值拆分 -->
+                        <?php
+                        //录入项
+                        $j=0;
+                        $mvf_record=explode('||||||',$navinfor[line]);
+                        $mvf_count=count($mvf_record);
+                        for($i=0;$i<$mvf_count;$i++)
+                        {
+                                $j=$i+1;
+                                $mvf_field=explode("::::::",$mvf_record[$i]);
+                                ?>
+                            <div class="day">
+                                    <div class="title">
+                                        <h5>第<span><?=$j?></span>天</h5>
+                                        <span><?=$mvf_field[0]?></span>
+                                    </div>
+                                </div>
+                                <div class="sideLeft">
+                                    <div class="pic"></div>
+                                    <div class="nr">
+                                            <?=$mvf_field[1]?>
+                                    </div>
+                                    <div class="eat">
+                                        <s></s>用餐：
+                                        <span>早餐 <?=$mvf_field[2]?></span>
+                                        <span>中餐 <?=$mvf_field[3]?></span>
+                                        <span>晚餐 <?=$mvf_field[4]?></span>
+                                    </div>
+                                    <div class="house">
+                                        <s></s>住宿：<?=$mvf_field[5]?></div>
+                                </div>
+                                <?php
+                            }
+                            ?>
+                    </div>
+                </div>
+                <div id="jd_list" class="box section">
+                    <div class="tit">
+                        <ul>
+                            <li class="on">
+                                <span>
+                                    <a name="jd_list">途经景点</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="txt1 tu_jiandian" id="jd_list_main">
+                        <p>
+                            <span>途径城市和目的地：</span>
+                            <a href="/beihai/zhoubian-8514" target="_blank">银滩</a>
+                            <a href="/beihai/zhoubian-8512" target="_blank">涠洲岛</a>
+                            <a href="/beihai/zhoubian-12546" target="_blank">北海</a>
+                            <a href="/beihai/zhoubian-8509" target="_blank">北部湾广场</a>
+                            <a href="/beihai/zhoubian-8508" target="_blank">北海老街</a>
+                            <a href="/beihai/zhoubian-15642" target="_blank">海滩公园</a>
+                            <a href="/beihai/zhoubian-beihai" target="_blank">北海</a> (
+                            <a href="http://beihai.cncn.com/jingdian/" target="_blank">北海景点</a>
+                            <a href="http://tianqi.cncn.com/beihai" target="_blank">北海天气</a>) </p>
+                        <dl>
+                            <dt>
+                                <a href="http://beihai.cncn.com/jingdian/yintan/" class="imgb" target="_blank">
+                                    <img src="http://c.cncnimg.cn/037/770/0033_s.jpg" width="80" height="80" align="absmiddle"
+                                        alt="银滩">
+                                </a>
+                            </dt>
+                            <dd>
+                                <a href="http://beihai.cncn.com/jingdian/yintan/" target="_blank">北海银滩</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="http://beihai.cncn.com/jingdian/weizhoudao/" class="imgb" target="_blank">
+                                    <img src="http://c.cncnimg.cn/038/978/b52a_s.jpg" width="80" height="80" align="absmiddle"
+                                        alt="涠洲岛">
+                                </a>
+                            </dt>
+                            <dd>
+                                <a href="http://beihai.cncn.com/jingdian/weizhoudao/" target="_blank">北海涠洲岛</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="http://beihai.cncn.com/jingdian/beihai/" class="imgb" target="_blank">
+                                    <img src="http://c.cncnimg.cn/037/350/2702_s.jpg" width="80" height="80" align="absmiddle"
+                                        alt="北海">
+                                </a>
+                            </dt>
+                            <dd>
+                                <a href="http://beihai.cncn.com/jingdian/beihai/" target="_blank">广西北海</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="http://beihai.cncn.com/jingdian/beibuwanguangchang/" class="imgb" target="_blank">
+                                    <img src="http://c.cncnimg.cn/037/770/0c5e_s.jpg" width="80" height="80" align="absmiddle"
+                                        alt="北部湾广场">
+                                </a>
+                            </dt>
+                            <dd>
+                                <a href="http://beihai.cncn.com/jingdian/beibuwanguangchang/" target="_blank">北海北部湾广场</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="http://beihai.cncn.com/jingdian/beihailaojie/" class="imgb" target="_blank">
+                                    <img src="http://c.cncnimg.cn/037/257/b188_s.jpg" width="80" height="80" align="absmiddle"
+                                        alt="北海老街">
+                                </a>
+                            </dt>
+                            <dd>
+                                <a href="http://beihai.cncn.com/jingdian/beihailaojie/" target="_blank">北海老街</a>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>
+                                <a href="http://beihai.cncn.com/jingdian/haitangongyuan/" class="imgb" target="_blank">
+                                    <img src="http://p2.cncnimg.cn/jdpic/16/15642_s.jpg" width="80" height="80" align="absmiddle"
+                                        alt="海滩公园">
+                                </a>
+                            </dt>
+                            <dd>
+                                <a href="http://beihai.cncn.com/jingdian/haitangongyuan/" target="_blank">海滩公园</a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div id="price_explan" class="box section">
+                    <div class="tit">
+                        <ul>
+                            <li class="on">
+                                <span>
+                                    <a name="price_explan">费用说明</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="txt1 fuwu" id="price_explan_main">
+                            [!--priceinfo--]
+                    </div>
+                </div>
+                <div id="remark" class="box section">
+                    <div class="tit">
+                        <ul>
+                            <li class="on">
+                                <span>
+                                    <a name="remark">预订指南</a>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="txt1 fuwu" id="remark_main">
+                        <div class="beizhu">
+                                [!--buy_guide--]
+                            </div>
+                        <div class="liucheng">
+                            <ul>
+                                <li class="bt">预订流程：</li>
+                                <li class="kaixin">
+                                    <span>网上预订/电话预订</span>
+                                </li>
+                                <li class="next"></li>
+                                <li>
+                                    <span>旅行社确认</span>
+                                </li>
+                                <li class="next"></li>
+                                <li>
+                                    <span>付款/签约</span>
+                                </li>
+                                <li class="next"></li>
+                                <li>
+                                    <span>预订成功</span>
+                                </li>
+                                <li class="next"></li>
+                                <li>
+                                    <span>开心出游</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+       
+            </div>
+            <!-- 相关攻略  -->
+            <div class="box mt20">
+                <div class="tit">
+                    <ul>
+                        <li class="on">
+                            <span>
+                                <a name="remark">相关攻略</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="youji">
+                    <ul>
+                        <li>
+                            <span>2015-01-05</span>
+                            <a href="http://lxs.cncn.com/78579/n470913" target="_blank">◆旅游途中保健常识</a>
+                        </li>
+                        <li>
+                            <span>2015-01-08</span>
+                            <a href="http://lxs.cncn.com/78579/n471887" target="_blank">◆涠洲岛最有特色的7种小吃与特产</a>
+                        </li>
+                        <li>
+                            <span>2011-12-27</span>
+                            <a href="http://lxs.cncn.com/78579/n178760" target="_blank">◆北海特色美食/特色酒楼介绍</a>
+                        </li>
+                        <li>
+                            <span>2011-12-28</span>
+                            <a href="http://lxs.cncn.com/78579/n178938" target="_blank">◆北海特产综合介绍</a>
+                        </li>
+                        <li>
+                            <span>2011-12-26</span>
+                            <a href="http://lxs.cncn.com/78579/n178501" target="_blank">◆北海海鲜种类的介绍</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 相关线路 -->
+            <div id="relate" class="box mt20">
+                <div class="tit">
+                    <ul>
+                        <li class="right_more">
+                            <a href="http://lxs.cncn.com/78579/l94055">【2日游】</a>
+                            <span>更多
+                                <a href="/beihai/zhoubian-d2" target="_blank">北海周边二日游</a>线路</span>
+                        </li>
+                        <li class="on">
+                            <span>
+                                <a href="http://www.cncn.com/xianlu/785791549794/relate">相关线路</a>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relate">
+                    <ul>
+                        <li>
+                            <div class="pic">
+                                <a href="/xianlu/785791429766" target="_blank" title="◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（无购物）">
+                                    <img src="http://c.cncnimg.cn/030/796/124c_m.jpg" width="168" height="112" alt="◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（无购物）">
+                                </a>
+                            </div>
+                            <p>
+                                <a target="_blank" href="/xianlu/785791429766" title="◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（无购物）">◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（...</a>
+                                <span>
+                                    <em>528</em>元起</span>
+                            </p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="/xianlu/785791957864" target="_blank" title="◆【涠洲岛冬季游】涠洲岛精华旅游推荐|涠洲岛旅游线路价格">
+                                    <img src="http://c.cncnimg.cn/037/065/b97d_m.jpg" width="168" height="112" alt="◆【涠洲岛冬季游】涠洲岛精华旅游推荐|涠洲岛旅游线路价格">
+                                </a>
+                            </div>
+                            <p>
+                                <a target="_blank" href="/xianlu/785791957864" title="◆【涠洲岛冬季游】涠洲岛精华旅游推荐|涠洲岛旅游线路价格">◆【涠洲岛冬季游】涠洲岛精华旅游推荐|涠洲...</a>
+                                <span>
+                                    <em>488</em>元起</span>
+                            </p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="/xianlu/785792594377" target="_blank" title="◆自驾车到北海.涠洲岛推荐线路|自驾车到北海.涠洲岛景点介绍">
+                                    <img src="http://c.cncnimg.cn/037/176/4534_m.jpg" width="168" height="112" alt="◆自驾车到北海.涠洲岛推荐线路|自驾车到北海.涠洲岛景点介绍">
+                                </a>
+                            </div>
+                            <p>
+                                <a target="_blank" href="/xianlu/785792594377" title="◆自驾车到北海.涠洲岛推荐线路|自驾车到北海.涠洲岛景点介绍">◆自驾车到北海.涠洲岛推荐线路|自驾车到北海...</a>
+                                <span>
+                                    <em>460</em>元起</span>
+                            </p>
+                        </li>
+                        <li>
+                            <div class="pic">
+                                <a href="/xianlu/785791429417" target="_blank" title="◆【纯玩团】北海至涠洲岛快船往返休闲1日游（无购物）">
+                                    <img src="http://c.cncnimg.cn/037/065/b97d_m.jpg" width="168" height="112" alt="◆【纯玩团】北海至涠洲岛快船往返休闲1日游（无购物）">
+                                </a>
+                            </div>
+                            <p>
+                                <a target="_blank" href="/xianlu/785791429417" title="◆【纯玩团】北海至涠洲岛快船往返休闲1日游（无购物）">◆【纯玩团】北海至涠洲岛快船往返休闲1日游...</a>
+                                <span>
+                                    <em>488</em>元起</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    
+        </div>
+
+        <div class="lft">
+    
+  
+            <div class="box190 mt10">
+                <div class="tit">
+                    <h4>服务承诺</h4>
+                </div>
+                <div class="txt1">
+                    <ul>
+                        <li>
+                            <i class="i0"></i>全程价格透明 明白消费</li>
+                        <li>
+                            <i class="i1"></i>精心筛选行程 品质感受</li>
+                        <li>
+                            <i class="i2"></i>绝无强制消费 正规服务</li>
+                        <li>
+                            <i class="i3"></i>品牌质量保证 支付安全</li>
+                    </ul>
+                </div>
+            </div>
+          
+            <div class="w190 mt10">
+                <div class="tit">
+                    <span id="cut1_1" onmousemove="sel_tag('cut1',1,2)" class="on">最新线路</span>
+                    <span id="cut1_2" onmousemove="sel_tag('cut1',2,2)">销售排行</span>
+                </div>
+                <div class="txt" id="cut1_content_1">
+                    <ul>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785794749322" title="◆【内蒙之旅】南宁、呼伦贝尔大草原、海拉尔、满洲里双飞8日游" target="_blank">
+                                <img src="http://c.cncnimg.cn/047/353/7a5e_s.jpg" width="40" height="30" alt="◆【内蒙之旅】南宁、呼伦贝尔大草原、海拉尔、满洲里双飞8日游">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785794749322" title="◆【内蒙之旅】南宁、呼伦贝尔大草原、海拉尔、满洲里双飞8日游" target="_blank">◆【内蒙之旅】南宁、呼伦贝尔大草原、海拉尔、满洲里双飞8日游</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>2580</b>元</em>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785794611467" title="◆【港澳之旅】南宁直飞-香港、澳门5日双飞纯玩游" target="_blank">
+                                <img src="http://s.cncnimg.cn/images/noPic_90x60_cjy.png" width="40" height="30" alt="◆【港澳之旅】南宁直飞-香港、澳门5日双飞纯玩游">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785794611467" title="◆【港澳之旅】南宁直飞-香港、澳门5日双飞纯玩游" target="_blank">◆【港澳之旅】南宁直飞-香港、澳门5日双飞纯玩游</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>3780</b>元</em>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785794602398" title="【江西游】南宁直飞-南昌、庐山、婺源、三清山双飞6日游" target="_blank">
+                                <img src="http://c.cncnimg.cn/046/935/f67d_s.jpg" width="40" height="30" alt="【江西游】南宁直飞-南昌、庐山、婺源、三清山双飞6日游">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785794602398" title="【江西游】南宁直飞-南昌、庐山、婺源、三清山双飞6日游" target="_blank">【江西游】南宁直飞-南昌、庐山、婺源、三清山双飞6日游</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>2780</b>元</em>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785794601655" title="◆【江西游】南宁直飞- 南昌、庐山、井冈山、杜鹃山双飞6日游" target="_blank">
+                                <img src="http://c.cncnimg.cn/045/665/09ff_s.jpg" width="40" height="30" alt="◆【江西游】南宁直飞- 南昌、庐山、井冈山、杜鹃山双飞6日游">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785794601655" title="◆【江西游】南宁直飞- 南昌、庐山、井冈山、杜鹃山双飞6日游" target="_blank">◆【江西游】南宁直飞- 南昌、庐山、井冈山、杜鹃山双飞6日游</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>2780</b>元</em>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785794600834" title="【江西游】南宁直飞-南昌、庐山、婺源、景德镇双飞6日游" target="_blank">
+                                <img src="http://c.cncnimg.cn/046/815/c136_s.jpg" width="40" height="30" alt="【江西游】南宁直飞-南昌、庐山、婺源、景德镇双飞6日游">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785794600834" title="【江西游】南宁直飞-南昌、庐山、婺源、景德镇双飞6日游" target="_blank">【江西游】南宁直飞-南昌、庐山、婺源、景德镇双飞6日游</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>2680</b>元</em>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="txt" id="cut1_content_2" style="display:none;">
+                    <ul>
+                        <li>
+                            <a href="http://beihai.cncn.com/ticket/78579302710" title="◇北海到海口轮船往返时间表/价格表" target="_blank">
+                                <img src="http://c.cncnimg.cn/037/948/82da_s.jpg" width="40" height="30" alt="◇北海到海口轮船往返时间表/价格表">
+                            </a>
+                            <div class="title">
+                                <a href="http://beihai.cncn.com/ticket/78579302710" title="◇北海到海口轮船往返时间表/价格表" target="_blank">◇北海到海口轮船往返时间表/价格表</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>190</b>元</em>
+                                <span>有
+                                    <em>57</em>人预订</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://beihai.cncn.com/ticket/78579302609" title="◇北海至涠洲岛往返轮船时间表" target="_blank">
+                                <img src="http://c.cncnimg.cn/041/570/2f39_s.jpg" width="40" height="30" alt="◇北海至涠洲岛往返轮船时间表">
+                            </a>
+                            <div class="title">
+                                <a href="http://beihai.cncn.com/ticket/78579302609" title="◇北海至涠洲岛往返轮船时间表" target="_blank">◇北海至涠洲岛往返轮船时间表</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>150</b>元</em>
+                                <span>有
+                                    <em>36</em>人预订</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785791556376" title="◆北海至越南、下龙、天堂岛、河内4日游(无自费项目|无保底）" target="_blank">
+                                <img src="http://c.cncnimg.cn/038/039/554a_s.jpg" width="40" height="30" alt="◆北海至越南、下龙、天堂岛、河内4日游(无自费项目|无保底）">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785791556376" title="◆北海至越南、下龙、天堂岛、河内4日游(无自费项目|无保底）" target="_blank">◆北海至越南、下龙、天堂岛、河内4日游(无自费项目|无保底）</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>508</b>元</em>
+                                <span>有
+                                    <em>16</em>人预订</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785791429766" title="◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（无购物）" target="_blank">
+                                <img src="http://c.cncnimg.cn/030/796/124c_s.jpg" width="40" height="30" alt="◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（无购物）">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785791429766" title="◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（无购物）" target="_blank">◆【纯玩】北海到涠洲岛.豪华快船2日休闲游（无购物）</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>528</b>元</em>
+                                <span>有
+                                    <em>11</em>人预订</span>
+                            </p>
+                        </li>
+                        <li>
+                            <a href="http://www.cncn.com/xianlu/785791460432" title="◆越南、下龙湾、天堂岛、河内4日游（一价全包|无自费项目）" target="_blank">
+                                <img src="http://c.cncnimg.cn/037/109/0e0d_s.jpg" width="40" height="30" alt="◆越南、下龙湾、天堂岛、河内4日游（一价全包|无自费项目）">
+                            </a>
+                            <div class="title">
+                                <a href="http://www.cncn.com/xianlu/785791460432" title="◆越南、下龙湾、天堂岛、河内4日游（一价全包|无自费项目）" target="_blank">◆越南、下龙湾、天堂岛、河内4日游（一价全包|无自费项目）</a>
+                            </div>
+                            <p>
+                                <em>
+                                    <b>508</b>元</em>
+                                <span>有
+                                    <em>10</em>人预订</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+
+    <script src="http://s.cncnimg.cn/css/wd/space_show.js?130314"></script>
+
+    
+</body>
+
+</html>
